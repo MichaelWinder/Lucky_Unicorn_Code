@@ -1,17 +1,14 @@
-def Yes_No_Checker():
+yes_no = ""
+while yes_no not in ("x", "f"):
     ans = input("Have you played Lucky Unicorn Before?: ").lower()
-    print(ans)
     while ans not in ("y", "yes", "n", "no"):
         ans = input("Have you played Lucky Unicorn Before?: ")
     else:
         if ans in ("y", "yes"):
-            return "x"
+            yes_no = "x"
+            print("Program continues")
+            yes_no = ""
         elif ans in ("n", "no"):
-            return "f"
-
-
-yes_no = (Yes_No_Checker())
-if yes_no == "x":
-    print("yes")
-elif yes_no == "f":
-    print("no")
+            yes_no = "f"
+            print("Program continues")
+            yes_no = ""
