@@ -25,19 +25,4 @@ def balance_set():
         balance_set()
 
 
-play = yes_no_checker("Do you want to play Lucky Unicorn?: ")
-if play == "No":
-    quit()
-
-
-def instruction():
-    print("====================\n~~~~INSTRUCTIONS~~~~\n\n(enter instructions here)\n\n====================")
-
-
-instructions = yes_no_checker("\nHave you played Lucky Unicorn Before?: ")
-if instructions == "No":
-    instruction()
-    balance2 = balance_set()
-elif instructions == "Yes":
-    balance2 = balance_set()
-
+balance2 = balance_set()
