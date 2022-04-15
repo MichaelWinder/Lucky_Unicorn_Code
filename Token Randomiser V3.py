@@ -1,5 +1,7 @@
 import random
 
+balance = 100
+
 
 def yes_no_checker(question_text):
     while True:
@@ -39,41 +41,5 @@ def randomiser(bal):
     return bal
 
 
-def balance_set():
-    balance = 99
-    while balance not in range(1, 11):
-        try:
-            balance = float(input("How much money do you want to put in?\n(Max is 10, Min is 1): "))
-        except ValueError:
-            balance = float(input("How much money do you want to put in?\n(Max is 10, Min is 1): "))
-    cash_yes_no = yes_no_checker(f"You have chosen to play with ${balance}\nIs that correct?")
-    if cash_yes_no == "Yes":
-        return balance
-    else:
-        print()
-        balance_set()
-
-
-play = yes_no_checker("Do you want to play Lucky Unicorn?: ")
-if play == "No":
-    quit()
-
-
-def instruction():
-    print("====================\n~~~~INSTRUCTIONS~~~~\n\n(enter instructions here)\n\n====================")
-
-
-instructions = yes_no_checker("\nHave you played Lucky Unicorn Before?: ")
-if instructions == "No":
-    instruction()
-    balance = balance_set()
-elif instructions == "Yes":
-    balance = balance_set()
-
 balance = randomiser(balance)
-while 1 < 10:
-    if yes_no_checker(f"Would you like to play another round?: ") == "Yes":
-        balance = randomiser(balance)
-    else:
-        print(f"\nYour Final Balance is ${balance:.2f}")
-        quit()
+
