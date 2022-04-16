@@ -44,10 +44,10 @@ def randomiser(bal):
         print("\nYou Won a Zebra\nThat's unlucky")
     elif 51 <= token <= 70:
         output = 0.5
-        print("\nYou Won a Donkey\nYuck!")
+        print("\nYou Won a Horse\nYuck!")
     else:
         output = 0
-        print("\nYou Won a Horse\nThat sucks")
+        print("\nYou Won a Donkey\nThat sucks")
     bal += output
     print(f"Your profit is ${output:.2f} and your total balance is ${bal:.2f}\n")
     return bal
@@ -73,8 +73,8 @@ def instruction():
                                           "\nEach round a token will be generated it will either be a"
                                           "\n-Unicorn $5"
                                           "\n-Zebra   $0.50"
-                                          "\n-Donkey  $0.50"
-                                          "\n-Horse   $0"
+                                          "\n-Horse   $0.50"
+                                          "\n-Donkey  $0"
                                           "\nEach of the cash totals equate to how much you receive"
                                           "\nWhen you end the game you will be given your profit\n====================\n")
 

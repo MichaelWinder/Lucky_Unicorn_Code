@@ -19,10 +19,10 @@ def randomiser(bal):
         print("\nYou Won a Zebra\nThat's unlucky")
     elif 51 <= token <= 70:
         output = 0.5
-        print("\nYou Won a Donkey\nYuck!")
+        print("\nYou Won a Horse\nYuck!")
     else:
         output = 0
-        print("\nYou Won a Horse\nThat sucks")
+        print("\nYou Won a Donkey\nThat sucks")
     bal += output
     print(f"Your profit is ${output:.2f} and your total balance is ${bal:.2f}\n")
     return bal
