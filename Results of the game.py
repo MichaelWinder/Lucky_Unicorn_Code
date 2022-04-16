@@ -1,5 +1,16 @@
 import random
-balance = 100
+
+
+def yes_no_checker(question_text):
+    while True:
+        ans = input(question_text).lower()
+        while ans not in ("y", "yes", "n", "no"):
+            ans = input(question_text).lower()
+        else:
+            if ans in ("y", "yes"):
+                return "Yes"
+            elif ans in ("n", "no"):
+                return "No"
 
 
 def randomiser(bal):
@@ -28,6 +39,18 @@ def randomiser(bal):
     return bal
 
 
+highest_number_list = []
+highest = None
+balance = 5
 balance = randomiser(balance)
-# Add play again fuction
-print(f"\nYour Final Balance is ${balance:.2f}")
+highest_number_list.append(balance)
+while 1 < 10:
+    if yes_no_checker(f"Would you like to play another round?: ") == "Yes":
+        balance = randomiser(balance)
+        highest_number_list.append(balance)
+    else:
+        for num in highest_number_list:
+            if highest is None or num > highest:
+                highest = num
+        print(f"\nYour Final Balance is ${balance:.2f} and your Highest Balance was ${highest:.2f}")
+        quit()
